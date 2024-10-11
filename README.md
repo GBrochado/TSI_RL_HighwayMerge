@@ -2,7 +2,7 @@
 Deep Multi-Agent Reinforcement Learning for Highway On-Ramp Merging in Mixed Traffic - Topics in Intelligent Systems
 
 # Code Replication
-create a python virtual environment: 'conda create -n marl_cav python=3.6 -y'
+create a python virtual environment: ´conda create -n marl_cav python=3.6 -y´
 
 
 active the virtual environment: 'conda activate marl_cav'
