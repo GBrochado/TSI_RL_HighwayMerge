@@ -1,6 +1,8 @@
 # TSI_RL_HighwayMerge
 Deep Multi-Agent Reinforcement Learning for Highway On-Ramp Merging in Mixed Traffic - Topics in Intelligent Systems
 
+Our approach replicates a project that can be viewed on this GitHub repository: [MARL_CAVs](https://github.com/DongChen06/MARL_CAVs?tab=readme-ov-file)
+
 # Code Replication
 create a python virtual environment: `conda create -n marl_cav python=3.6 -y`
 
