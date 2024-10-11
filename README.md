@@ -15,9 +15,13 @@ install the requirements: `pip install -r requirements.txt`
 
 # Usage
 To run the code, use the following commands:
+
 For training a model:
+
 `python run_xxx.py --option train`
+
 For evaluating a trained model:
+
 `python run_xxx.py --option eva --model-dir path_to_model`
 
 The config files contain the parameters for the MARL policies.
