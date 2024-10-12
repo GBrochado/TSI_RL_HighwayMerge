@@ -18,7 +18,7 @@ class ActorNetwork(nn.Module):
     def __call__(self, state):
         out = nn.functional.relu(self.fc1(state))
         out = nn.functional.relu(self.fc2(out))
-        out = self.output_act(self.fc3(out))
+        out = self.output_act(self.fc3(out), dim=1)
         return out
 
 
