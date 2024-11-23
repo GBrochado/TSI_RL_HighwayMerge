@@ -4,4 +4,5 @@ gym==0.18.0
 matplotlib==3.3.4
 opencv-python==4.5.1.48
 pygame==2.0.0
-tqdm
+tqdm==4.64.1
+tensorboard==2.10.1
