@@ -55,15 +55,34 @@ We analyzed the agents' performance based on:
 - **Collision Rates**: To measure safety and identify reward structures yielding optimal results.
 
 ### **Additional Features**
+
 1. **Behavioral Variations in Non-Controlled Vehicles**:  
-   We simulated varying driving styles to test adaptability:  
-   - **Aggressive Behavior**: Vehicles drove faster, executed quicker lane changes, and induced abrupt braking in others.  
-   - **Cautious Behavior**: Vehicles maintained larger distances, drove slower, and performed safer lane changes.
+   To test the adaptability of our model, we introduced diverse driving styles for vehicles not controlled by the agent. These behaviors were defined as follows:  
+   - **Aggressive Behavior**:  
+     - Higher desired maximum acceleration.  
+     - Higher deceleration capability to minimize unnecessary braking.  
+     - Reduced desired distance to the vehicle in front.  
+     - Shorter time gap to the vehicle ahead.  
+     - Lower minimum acceleration gain required to initiate a lane change.  
+     - Increased maximum braking force imposed on other vehicles during lane changes.  
+     - Shorter time allowed to reach maximum acceleration.  
+   - **Cautious Behavior**:  
+     - Lower desired maximum acceleration.  
+     - Lower deceleration capability to avoid abrupt stops.  
+     - Increased desired distance to the vehicle in front.  
+     - Higher time gap to the vehicle ahead.  
+     - Higher minimum acceleration gain required to initiate a lane change.  
+     - Reduced braking force imposed on other vehicles during lane changes.  
+     - Longer time allowed to reach maximum acceleration.  
 
 2. **Creative Idea – Delivery Vehicles ("Couriers")**:  
-   Inspired by real-world delivery objectives, we introduced a scenario where the agent's goal was to reach the destination as quickly as possible:
-   - Rewards were weighted more heavily toward speed.  
-   - Agents took faster actions while avoiding major disruptions to surrounding vehicles.
+   Inspired by real-world delivery objectives, we designed a scenario simulating vehicles with delivery tasks, prioritizing speed and efficiency. These "couriers" exhibited the following characteristics:  
+   - **Rewards and Behavior Adjustments**:  
+     - Increased high-speed reward (from 1 to 3) to incentivize faster movement.  
+     - Shorter time allowed to reach maximum acceleration, enabling quicker starts.  
+     - Faster reaction times for lane changes, optimizing their ability to navigate traffic.  
+     - Increased allowed speed (from 30 to 40), reflecting the urgency of reaching their destination.  
+   - The agents aimed to achieve high speeds and efficient maneuvers while minimizing disruptions to surrounding traffic, striking a balance between aggressive and safe driving.  
   
 
 ## Setup
