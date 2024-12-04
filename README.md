@@ -113,5 +113,5 @@ We analyzed the agents' performance based on:
 
 `python run_xxx.py --option eva --model-dir path_to_model`
 
-Replace path_to_model with the path to the directory containing your trained model.
+Replace `path_to_model` with the path to the directory containing your trained model.
 
