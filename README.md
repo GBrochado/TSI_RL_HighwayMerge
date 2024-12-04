@@ -1,7 +1,7 @@
 # README
 
 ## TSI_RL_HighwayMerge
-Assignment og the course Topics on Intelligent Systems (MSc in Artificial Intelligence, 1st semester)
+Assignment on the course Topics on Intelligent Systems (MSc in Artificial Intelligence, 1st semester)
 
 ## A little context
 ### Overview
