@@ -95,9 +95,9 @@ We analyzed the agents' performance based on:
 
 `conda activate marl_cav`
 
-### Install PyTorch and its sddociated libraries
+### Install PyTorch (torch>=1.2.0) and its sddociated libraries
 
-`install pytorch (torch>=1.2.0): `conda install pytorch==1.7.0 torchvision==0.8.1 torchaudio==0.7.0 -c pytorch`
+`conda install pytorch==1.7.0 torchvision==0.8.1 torchaudio==0.7.0 -c pytorch`
 
 ### Install Additional Requirements
 
