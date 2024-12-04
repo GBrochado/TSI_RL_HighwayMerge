@@ -14,7 +14,7 @@ The paper explores the application of multi-agent reinforcement learning (MARL) 
 ### On the paper
 - **Simulated Scenario**: The model was trained in a highway environment with two main lanes and one merging lane, replicating real-world traffic conditions.
 
-METER IMAGEM QUE USAMOS NO POWERPOINT
+![Environment](figures/environment.png)
 
 #### Key Features and Techniques:
 - **Action Masking**: Unsafe actions, such as leaving the highway boundaries, were disabled during training to ensure the agents' safety and focus on valid maneuvers.
