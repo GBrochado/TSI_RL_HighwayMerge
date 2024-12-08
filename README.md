@@ -42,7 +42,7 @@ We experimented with different reward adjustments to evaluate their impact on ag
 - **Collision Penalty**: Adjusted from -200 to -100 and -1000 to study the influence on safety.  
 - **Speed Incentive**: Increased from 1 to 2 and 4, promoting faster but controlled driving.  
 - **Penalty for Staying in the Merging Lane**: Modified from 4 to 2 and 6 to encourage quicker merging.  
-- **Proximity Reward**: Incentivized maintaining a safe distance (e.g., 4 meters) from the car in front, testing variations of 2 and 6 to optimize behavior.
+- **Proximity Penalty**: Incentivized maintaining a safe distance from the car in front, the distance is multiplied by 4, and variations of 2 and 6 will be tested to optimize behavior.
 
 #### **Environment Modifications**
 To expand the study, we explored different highway configurations:
@@ -85,11 +85,40 @@ We analyzed the agents' performance based on:
    - The agents aimed to achieve high speeds and efficient maneuvers while minimizing disruptions to surrounding traffic, striking a balance between aggressive and safe driving.  
 
 ## Results
+### Model comparison
+![Main model](figures/model_comparison.png)
+
+Our chosen model achieved a higher average velocity among all the cars and, in terms of collision, exhibited low peaks, achieving results comparable to the paper's model. Overall, Mappo demonstrated the best performance due to its ability to enhance average velocity, maintaining traffic flow, and reduce the number of collisions.
+
 ### Reward Shaping
 
-1. **Collision Reward**:
+1. **Collision Penalty**:
+   ![Collision Penalty](figures/collision_reward.png)
+
+Having a low penalty on collision (100) led to better results on both graphs. As the penalty increased, the average velocity decreased. The collsion rate was very low with the lower reward, but the other values also performed well, achieving very few collisions. Based on this, we chose a penalty value of 100 for further testing.
    
-2. 
+2. **High Speed Reward**
+   ![High Speed Reward](figures/speed_reward.png)
+
+As expected, higher speed reward resulted in a higher average velocity, while the collision rate remained low. This suggests the conclusion that higher speed do not necessarily lead to more collisions. Based on the results, we chose a reward value of 4 for further testing.
+
+3. **Headway Penalty**
+   ![Headway Penalty](figures/headway_reward.png)
+
+Both adjustments led to improved average velocity, but the lower penalty value produced the best result. The number of collisions was lower even with reduced penalization when vehicles were close to each other. Based on these results, we selected a penalty value of 2 for further testing.
+
+4. **Merge Lane Penalty**
+ ![Merge Lane Penalty](figures/merge_lane_reward.png)
+
+With the increase in the penalty, the cars achieved higher average velocity, likely due to the necessity to merge faster onto the highway and them speed up. Both penalty adjustments resulted in fewer collisions. Once again, we selected the penalty value that yielded the best results, which in this case was 6.
+
+### Environment Changes
+
+1. **1 lane environment**
+ ![1 lane env](figures/1_lane_result.png)
+
+   
+  
 
 ## Setup
 
