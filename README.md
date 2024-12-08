@@ -114,10 +114,38 @@ With the increase in the penalty, the cars achieved higher average velocity, lik
 
 ### Environment Changes
 
+Here, we compared the paper's model with our approach across diferent environments. In Mappo, our approach utilized the optimal rewards identified through reward shaping, while the paper's model retained its original rewards.
+
 1. **1 lane environment**
  ![1 lane env](figures/1_lane_result.png)
 
-   
+Our approach demonstrated better results in terms of average speed. In this environment with only one highway lane, the merge was performed effectively, maintaining the traffic flow. The collision rate fluctuated significantly during training but ultimately achieved a result similar to that of the paper's model.
+
+2. **2 lanes environment**
+ ![2 lanes env](figures/2_lane_result.png)
+
+Mappo initially showed promising results but experienced a drastic decline in the average speed towards the end. In terms of collisions, both models fluctuated during training but ultimately achieved similar outcomes. 
+
+To investigate the drastic drop in average speed, we explored potencial explanations. One possibility is that the rewards previously identified were effective on an individual basis but, when combined, could lead to outcomes like this. Another explanation is that the model became confident in its decisions up to that point and began exploring alternative set of actions.
+
+3. **3 lanes environment**
+   ![3 lanes env](figures/3_lane_result.png)
+
+Mappo exhibit a substantial increase in average speed, demonstrating strong adaptability to a different scenario. The collision rate was low, which was expected, as the increased space likely kept the right lane clearer for merging vehicles.  
+
+### Behaviour Changes
+![Behaviour Changes](figures/Behaviour_result.png)
+
+Both behaviour changes yielded good results, with higher average speeds and lower collision rates. As expected, the model with more agressive vehicles experienced more collisions compared to the one with cautious vehicles. However, the model adapted to the agressive behaviour and ultimately achieved better results than the original.
+
+### Creative Approach ("Couriers")
+![Couriers](figures/Courier_result.png)
+
+It started well but ultimately achieved a lower average speed than the original. In terms of collisions, it experienced a few, which, while not optimal, were expected due to the changes made to prioritize faster arrival at the destination. 
+
+Overall, this approach requires further refinement, both in the reward structure and in the new methods, to more effectively simulate courier behaviour.
+
+
   
 
 ## Setup
