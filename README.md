@@ -95,7 +95,7 @@ Our chosen model achieved a higher average velocity among all the cars and, in t
 1. **Collision Penalty**:
    ![Collision Penalty](figures/collision_reward.png)
 
-Having a low penalty on collision (100) led to better results on both graphs. As the penalty increased, the average velocity decreased. The collsion rate was very low with the lower reward, but the other values also performed well, achieving very few collisions. Based on this, we chose a penalty value of 100 for further testing.
+Having a low penalty on collision (100) led to better results on both graphs. As the penalty increased, the average velocity decreased. The collision rate was very low with the lower reward, but the other values also performed well, achieving very few collisions. Based on this, we chose a penalty value of 100 for further testing.
    
 2. **High Speed Reward**
    ![High Speed Reward](figures/speed_reward.png)
@@ -114,7 +114,7 @@ With the increase in the penalty, the cars achieved higher average velocity, lik
 
 ### Environment Changes
 
-Here, we compared the paper's model with our approach across diferent environments. In Mappo, our approach utilized the optimal rewards identified through reward shaping, while the paper's model retained its original rewards.
+Here, we compared the paper's model with our approach across different environments. In Mappo, our approach utilized the optimal rewards identified through reward shaping, while the paper's model retained its original rewards.
 
 1. **1 lane environment**
  ![1 lane env](figures/1_lane_result.png)
@@ -126,7 +126,7 @@ Our approach demonstrated better results in terms of average speed. In this envi
 
 Mappo initially showed promising results but experienced a drastic decline in the average speed towards the end. In terms of collisions, both models fluctuated during training but ultimately achieved similar outcomes. 
 
-To investigate the drastic drop in average speed, we explored potencial explanations. One possibility is that the rewards previously identified were effective on an individual basis but, when combined, could lead to outcomes like this. Another explanation is that the model became confident in its decisions up to that point and began exploring alternative set of actions.
+To investigate the drastic drop in average speed, we explored potencial explanations. One possibility is that the rewards previously identified were effective on an individual basis but, when combined, could lead to outcomes like this one. Another explanation is that the model became confident in its decisions up to that point and began exploring alternative set of actions.
 
 3. **3 lanes environment**
    ![3 lanes env](figures/3_lane_result.png)
