@@ -145,6 +145,7 @@ It started well but ultimately achieved a lower average speed than the original.
 
 Overall, this approach requires further refinement, both in the reward structure and in the new methods, to more effectively simulate courier behaviour.
 
+### Visual Courier Results
 ![Couriers test](figures/Courier.gif)
   
 
