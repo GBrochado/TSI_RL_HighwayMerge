@@ -83,7 +83,13 @@ We analyzed the agents' performance based on:
      - Faster reaction times for lane changes, optimizing their ability to navigate traffic.  
      - Increased allowed speed (from 30 to 40), reflecting the urgency of reaching their destination.  
    - The agents aimed to achieve high speeds and efficient maneuvers while minimizing disruptions to surrounding traffic, striking a balance between aggressive and safe driving.  
-  
+
+## Results
+### Reward Shaping
+
+1. **Collision Reward**:
+   
+2. 
 
 ## Setup
 
